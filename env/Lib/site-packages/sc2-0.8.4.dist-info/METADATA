@@ -1,0 +1,29 @@
+Metadata-Version: 2.1
+Name: sc2
+Version: 0.8.4
+Summary: A StarCraft II API Client for Python 3
+Home-page: https://github.com/Dentosal/python-sc2
+Author: Hannes Karppila
+Author-email: hannes.karppila@gmail.com
+License: MIT
+Keywords: StarCraft,StarCraft 2,StarCraft II,AI,Bot
+Platform: UNKNOWN
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Education
+Classifier: Intended Audience :: Science/Research
+Classifier: Topic :: Games/Entertainment
+Classifier: Topic :: Games/Entertainment :: Real Time Strategy
+Classifier: Topic :: Scientific/Engineering
+Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Requires-Dist: s2clientprotocol
+Requires-Dist: websockets
+Requires-Dist: portpicker
+Requires-Dist: async-timeout
+
+UNKNOWN
+
+

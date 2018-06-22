@@ -1,0 +1,28 @@
+Metadata-Version: 2.0
+Name: s2clientprotocol
+Version: 4.3.2.65384.0
+Summary: StarCraft II - client protocol.
+Home-page: https://github.com/Blizzard/s2client-proto
+Author: Blizzard Entertainment
+Author-email: jrepp@blizzard.com
+License: MIT
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: Environment :: Console
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Intended Audience :: Science/Research
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: POSIX
+Classifier: Operating System :: Microsoft :: Windows
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Programming Language :: Python :: 2.6
+Classifier: Programming Language :: Python :: 2.7
+Classifier: Programming Language :: Python :: 3.4
+Classifier: Topic :: Games/Entertainment :: Real Time Strategy
+Classifier: Topic :: Software Development :: Libraries
+Requires-Dist: protobuf
+
+UNKNOWN
+
+
