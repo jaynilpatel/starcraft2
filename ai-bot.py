@@ -4,7 +4,12 @@ from sc2.player import Bot, Computer
 from sc2.constants import NEXUS, PROBE, PYLON, ASSIMILATOR, \
 GATEWAY, STALKER, CYBERNETICSCORE, \
 STARGATE, VOIDRAY   
+import random
+import numpy as np 
+import cv2
+
 '''
+
 NEXUS is required to build PROBES (ie WORKERS, collects the minerals).
 
 PYLON is required to increase supplies and gives an area (PSIONIC MATRIX) to make offensive buildings such as GATEWAYS, 
@@ -28,7 +33,7 @@ VOIDRAY are air unit force.
 
 '''
 
-import random
+
 
 class OurCustomBot(sc2.BotAI):
 
@@ -47,7 +52,23 @@ class OurCustomBot(sc2.BotAI):
         await self.build_offensive_force_buildings()
         await self.build_offensive_force()
         await self.attack()
-        
+        await self.intel()
+
+    async def intel(self):
+        game_data = np.zeros((self.game_info.map_size[1], self.game_info.map_size[0], 3), np.uint8)
+        for nexus in self.units(NEXUS):
+            nex_pos = nexus.position
+            print(nex_pos)
+            # cv2.circle(data to plot, (x_pos, y_pos), size, (blue,green,red), thickness[-1 means filled circle])
+            cv2.circle(game_data, (int(nex_pos[0]), int(nex_pos[1])), 10, (0, 255, 0), -1)  
+
+        # flip the image(which is plot from top left) horizontally to make our final image fix in visual representation(which is plotted from bottom right, like cartesian plan)
+        flipped = cv2.flip(game_data, 0)
+        # resize the to make it bigger. this resize image will not be fed to neural network.
+        # fx = 2 fy =2 means scale x and y axis by the factor of 2.
+        resized = cv2.resize(flipped, dsize=None, fx=2, fy=2)
+        cv2.imshow('Intel', resized)
+        cv2.waitKey(1)
 
     async def build_workers(self):
         if (len(self.units(NEXUS)) * 16) > len(self.units(PROBE)):
@@ -88,7 +109,7 @@ class OurCustomBot(sc2.BotAI):
                 if self.can_afford(CYBERNETICSCORE) and not self.already_pending(CYBERNETICSCORE):
                     await self.build(CYBERNETICSCORE, near=pylon)
 
-            elif len(self.units(GATEWAY)) < ((self.iteration / self.ITERATIONS_PER_MINUTE)/2):
+            elif len(self.units(GATEWAY)) < 1:
                 if self.can_afford(GATEWAY) and not self.already_pending(GATEWAY):
                     await self.build(GATEWAY, near=pylon)
 
@@ -99,12 +120,6 @@ class OurCustomBot(sc2.BotAI):
 
 
     async def build_offensive_force(self):
-        for gw in self.units(GATEWAY).ready.noqueue:
-            if not self.units(STALKER).amount > self.units(VOIDRAY).amount:
-
-                if self.can_afford(STALKER) and self.supply_left > 0:
-                    await self.do(gw.train(STALKER))
-
         for sg in self.units(STARGATE).ready.noqueue:
             if self.can_afford(VOIDRAY) and self.supply_left > 0:
                 await self.do(sg.train(VOIDRAY))
@@ -123,8 +138,9 @@ class OurCustomBot(sc2.BotAI):
     '''
     async def attack(self):
         # {UNIT: [n to fight, n to defend]}
-        aggressive_units = {STALKER: [15, 5],
-                            VOIDRAY: [8, 3]}
+        aggressive_units = {
+                            VOIDRAY: [8, 3]
+                            }
 
         for UNIT in aggressive_units:
             if self.units(UNIT).amount > aggressive_units[UNIT][0] and self.units(UNIT).amount > aggressive_units[UNIT][1]:
