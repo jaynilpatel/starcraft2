@@ -8,13 +8,25 @@ To help visualize the what was going on, a graphical representation was created 
 
 The second part was to train the CNN model using this data. The training data which was generated for 100 successful games was fed in CNN. The resultant model is now able to win most of the games at medium difficulty.
 
-### Before you start the game:
+#### Before you start the game:
  1. First, you will need to download/install StarCraft II. Grab the client, and install the game from here: [Clients](https://us.battle.net/account/download/).
  1. Download Maps Packs from Blizzard s2client: [Map Packs](https://github.com/Blizzard/s2client-proto#map-packs)
-    1. Download all the maps if you want
-    1. Once you have some maps in archives, extract them to a Maps directory from within your StarCraft II directory. Each set of maps         should be in a *subdirectory* of the Maps directory. For example, the file structure should be something like:
- 1. Download the training data if you want to train your own network : [here](https://drive.google.com/open?id=1rIkBJbLvlWS4aw7RA0vaivK6TMzrmE8J)
+    1. Download ```Ladder 2017 Season 1```
+    1. Once you have the maps archive, extract them to a Maps directory from within your StarCraft II directory (C:\Program Files (x86)\StarCraft II\Maps). Now the hierarchy will be:  
+      ```
+      Program Files(x86)
+      -StarCraft II
+      --Maps
+      ---Ladder2017Season1
+      ----AbyssalReefLE.SC2Map
+      ```
  1. Download the trained model: [here](https://drive.google.com/open?id=1t_3Jn2YH8JxcXH2asQA11skVr6rm9xFt)
+    1. Extract the archive to get ```BasicCNN-30-epochs-0.0001-LR-4.2```.
+    1. Place this in the same directory as ```ai-bot.py``` 
+ 1. Download the training data if you want to train your own network : [here](https://drive.google.com/open?id=1rIkBJbLvlWS4aw7RA0vaivK6TMzrmE8J)
+    1. Extract the archive to get ```train_data``` folder.
+    1. Place this in the same directory as ```ai-bot.py``` 
+ 
  
 ## Setup Game
 
