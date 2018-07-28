@@ -1,4 +1,4 @@
-# starcraft2-ai
+# StarCraft2 AI Bot
 
 An attempt to implement a deep learning model (CNN) in the strategic game, Starcraft 2. The goal here is to build a model which can learn the tactics for playing and winning the game against the built-in another bot. A library known as PySC2 was extensively used in order to interact with game objects using python.
 
