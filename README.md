@@ -13,13 +13,13 @@ The second part was to train the CNN model using this data. The training data wh
  1. Download Maps Packs from Blizzard s2client: [Map Packs](https://github.com/Blizzard/s2client-proto#map-packs)
     1. Download ```Ladder 2017 Season 1```
     1. Once you have the maps archive, extract them to a Maps directory from within your StarCraft II directory (C:\Program Files (x86)\StarCraft II\Maps). Now the hierarchy will be:  
-      ```
-      Program Files(x86)
-      -StarCraft II
-      --Maps
-      ---Ladder2017Season1
-      ----AbyssalReefLE.SC2Map
-      ```
+        ```
+        Program Files(x86)
+        -StarCraft II
+        --Maps
+        ---Ladder2017Season1
+        ----AbyssalReefLE.SC2Map
+        ```
  1. Download the trained model: [here](https://drive.google.com/open?id=1t_3Jn2YH8JxcXH2asQA11skVr6rm9xFt)
     1. Extract the archive to get ```BasicCNN-30-epochs-0.0001-LR-4.2```.
     1. Place this in the same directory as ```ai-bot.py``` 
