@@ -37,5 +37,5 @@ YOUR DIRECTORY PATH>env\Scripts\activate
 ```
 This will activate the enviroment. Now just run the ```ai-bot.py```
 ```
-(env) C:\Python36\ml\starcraft2>python ai-bot.py
+(env) YOUR DIRECTORY PATH>python ai-bot.py
 ```
