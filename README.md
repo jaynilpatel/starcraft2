@@ -20,14 +20,33 @@ The second part was to train the CNN model using this data. The training data wh
         ---Ladder2017Season1
         ----AbyssalReefLE.SC2Map
         ```
- 1. Download the trained model: [here](https://drive.google.com/open?id=1t_3Jn2YH8JxcXH2asQA11skVr6rm9xFt)
+ 1. Download the trained model: [Here](https://drive.google.com/open?id=1t_3Jn2YH8JxcXH2asQA11skVr6rm9xFt)
     1. Extract the archive to get ```BasicCNN-30-epochs-0.0001-LR-4.2```.
     1. Place this in the same directory as ```ai-bot.py``` 
- 1. Download the training data if you want to train your own network : [here](https://drive.google.com/open?id=1rIkBJbLvlWS4aw7RA0vaivK6TMzrmE8J)
+ 1. Download the training data if you want to train your own network : [Here](https://drive.google.com/open?id=1rIkBJbLvlWS4aw7RA0vaivK6TMzrmE8J)
     1. Extract the archive to get ```train_data``` folder.
     1. Place this in the same directory as ```ai-bot.py``` 
  
+ #### Use the trained model
  
+ Open ```ai-bot.py``` and set ```use_model=True```
+ ```
+ run_game(maps.get("AbyssalReefLE"),[
+    Bot( Race.Protoss, OurCustomBot(use_model=True)),
+    Computer( Race.Terran, Difficulty.Medium)
+], realtime=False)
+ ```
+ 
+#### Set gameplay in real time
+
+Open ```ai-bot.py``` and set ```realtime=True```
+ ```
+ run_game(maps.get("AbyssalReefLE"),[
+    Bot( Race.Protoss, OurCustomBot(use_model=True)),
+    Computer( Race.Terran, Difficulty.Medium)
+], realtime=True)
+ ```
+
 ## Setup Game
 
 Open command prompt on Windows in this same directory. Then to run the game:
