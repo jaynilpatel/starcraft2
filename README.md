@@ -1,6 +1,6 @@
 # StarCraft2 AI Bot
 
-An attempt to implement a deep learning model (CNN) in the strategic game, Starcraft 2. The goal here is to build a model which can learn the tactics for playing and winning the game against the built-in another bot. A library known as PySC2 was extensively used in order to interact with game objects using python.
+An attempt to implement a deep learning model (CNN) in the strategic game, Starcraft 2. The goal here is to build a model which can learn the tactics for playing and winning the game against the another bot (built-in). A library known as PySC2 was extensively used in order to interact with game objects using python.
 
 The first part was to generate the training data. This was made possible by writing a script that takes random decisions in the game yet following certain rules for the game. The decisions were not totally random, since some of the decisions were hardcoded. The game was simulated for a particular game map (Abyssal Reef LE).
 
@@ -10,7 +10,7 @@ The second part was to train the CNN model using this data. The training data wh
 
 #### Before you start the game:
  1. First, you will need to download/install StarCraft II. Grab the client, and install the game from here: [Clients](https://us.battle.net/account/download/).
- 1. Download Maps Packs from Blizzard s2client: [Map Packs](https://github.com/Blizzard/s2client-proto#map-packs)
+ 1. Download Map Packs from Blizzard s2client: [Map Packs](https://github.com/Blizzard/s2client-proto#map-packs)
     1. Download ```Ladder 2017 Season 1```
     1. Once you have the maps archive, extract them to a Maps directory from within your StarCraft II directory (C:\Program Files (x86)\StarCraft II\Maps). Now the hierarchy will be:  
         ```
@@ -49,7 +49,7 @@ Open ```ai-bot.py``` and set ```realtime=True```
 
 ## Setup Game
 
-Open command prompt on Windows in this same directory. Then to run the game:
+Open command prompt on Windows in the same directory where  ```env``` folder exist. Then to run the game, first start the environment :
 ```
 # start the environment
 YOUR DIRECTORY PATH>env\Scripts\activate
