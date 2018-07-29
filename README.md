@@ -49,7 +49,14 @@ Open ```ai-bot.py``` and set ```realtime=True```
 
 ## Setup Game
 
-Open command prompt on Windows in the same directory where  ```env``` folder exist. Then to run the game, first start the environment :
+Install ```virtualenv``` by running the following pip command:
+```
+C:\Users\USERNAME>pip3 install --user --upgrade virtualenv
+Collecting virutalenv
+[...]
+Successfully installed virtualenv
+```
+Open command prompt on Windows in the same directory where  ```env``` folder exist. Now to run the game, start the environment :
 ```
 # start the environment
 YOUR DIRECTORY PATH>env\Scripts\activate
