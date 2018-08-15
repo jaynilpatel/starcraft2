@@ -20,10 +20,11 @@ The second part was to train the CNN model using this data. The training data wh
         ---Ladder2017Season1
         ----AbyssalReefLE.SC2Map
         ```
- 1. Download the trained model: [Here](https://drive.google.com/open?id=1t_3Jn2YH8JxcXH2asQA11skVr6rm9xFt)
+ 1. Clone this repository.
+ 1. Download the trained model: [Model](https://drive.google.com/open?id=1t_3Jn2YH8JxcXH2asQA11skVr6rm9xFt)
     1. Extract the archive to get ```BasicCNN-30-epochs-0.0001-LR-4.2```.
-    1. Place this in the same directory as ```ai-bot.py``` 
- 1. Download the training data if you want to train your own network : [Here](https://drive.google.com/open?id=1rIkBJbLvlWS4aw7RA0vaivK6TMzrmE8J)
+    1. Place this in the same directory as ```ai-bot.py``` (inside the repository).
+ 1. Download the training data if you want to train your own network : [Data](https://drive.google.com/open?id=1rIkBJbLvlWS4aw7RA0vaivK6TMzrmE8J)
     1. Extract the archive to get ```train_data``` folder.
     1. Place this in the same directory as ```ai-bot.py``` 
  
@@ -56,12 +57,12 @@ Collecting virutalenv
 [...]
 Successfully installed virtualenv
 ```
-Open command prompt on Windows in the same directory where  ```env``` folder exist. Now to run the game, start the environment :
+Open command prompt on Windows in the same directory where  ```env``` folder exist (inside the repository). Now to run the game, start the environment :
 ```
 # start the environment
-YOUR DIRECTORY PATH>env\Scripts\activate
+YOUR REPOSITORY PATH>env\Scripts\activate
 ```
-This will activate the enviroment. Now just run the ```ai-bot.py```
+This will activate the enviroment. Now run ```ai-bot.py```
 ```
-(env) YOUR DIRECTORY PATH>python ai-bot.py
+(env) YOUR REPOSITORY PATH>python ai-bot.py
 ```
