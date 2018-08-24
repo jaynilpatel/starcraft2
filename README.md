@@ -66,8 +66,8 @@ This will activate the enviroment. Now run ```ai-bot.py```
 ```
 (env) YOUR REPOSITORY PATH>python ai-bot.py
 ```
-![alt text](https://github.com/jaynilpatel/starcraft2/blob/master/train_data/snap_1.png)
+![snap_1.png](https://github.com/jaynilpatel/starcraft2/blob/master/train_data/snap_1.png)
 
-![alt text](https://github.com/jaynilpatel/starcraft2/blob/master/train_data/snap_2.png)
+![snap_2.png](https://github.com/jaynilpatel/starcraft2/blob/master/train_data/snap_2.png)
 
-![alt text](https://github.com/jaynilpatel/starcraft2/blob/master/train_data/snap_3.png)
+![snap_3.png](https://github.com/jaynilpatel/starcraft2/blob/master/train_data/snap_3.png)
